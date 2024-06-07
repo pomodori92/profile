@@ -81,6 +81,11 @@ body {
     padding: 10px;
     margin-right: 15px;
     width: 48%;
+    height: 114px;
+}
+
+.username {
+    padding-top: 10px;
 }
 
 .status img {
@@ -119,12 +124,14 @@ body {
     width: 50px;
     border-radius: 15px;
     display: inline-block;
+    padding-top: 8px;
 }
 
 .song-title {
     font-size: 1em;
     color: white;
     margin: 0;
+    padding-top: 10px;
 }
 
 .artist {
