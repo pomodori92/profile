@@ -1,18 +1,24 @@
+:root {
+    --background-color: rgb(14, 14, 14);
+    --text-color: white;
+    --gray-color: gray;
+    --lightgray-color: lightgray;
+    --border-color: rgba(143, 143, 143, 0.233);
+    --highlight-color: rgba(173, 84, 255, 1);
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(14, 14, 14);
-    color: white;
+    background: var(--background-color) url('img/stars.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
     font-family: "Fira Code", monospace;
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('img/stars.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .container {
@@ -27,7 +33,7 @@ body {
     display: flex;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(143, 143, 143, 0.233);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .profile-pic {
@@ -52,15 +58,15 @@ body {
     font-size: 1.2em;
 }
 
-.subtitle {
+.subtitle, .current-status {
     font-size: 1em;
-    color: gray;
+    color: var(--gray-color);
     margin: 5px 0;
 }
 
 .joined {
     font-size: 0.8em;
-    color: lightgray;
+    color: var(--lightgray-color);
     margin: 5px 0;
 }
 
@@ -71,41 +77,29 @@ body {
     margin-top: 20px;
 }
 
-.status {
+.status, .music {
     display: flex;
     align-items: center;
     border-radius: 15px;
-    border: solid;
-    border-width: 2px;
-    border-color: rgba(143, 143, 143, 0.233);
+    border: 2px solid var(--border-color);
     padding: 10px;
-    margin-right: 15px;
     width: 48%;
+}
+
+.status {
+    margin-right: 15px;
     height: 114px;
 }
 
-.username {
-    padding-top: 10px;
-}
-
-.status img {
+.status img, .song-image {
     margin-right: 10px;
     width: 60px;
     height: 60px;
-}
-
-.current-status {
-    font-size: 0.8em;
-    color: gray;
-}
-
-.music {
     border-radius: 15px;
-    padding: 10px;
-    width: 48%;
-    border: solid;
-    border-color: rgba(143, 143, 143, 0.233);
-    border-width: 2px;
+}
+
+.username, .song-title {
+    padding-top: 10px;
 }
 
 .link-content {
@@ -122,31 +116,28 @@ body {
 .song-image {
     height: 50px;
     width: 50px;
-    border-radius: 15px;
-    display: inline-block;
     padding-top: 8px;
+}
+
+.song-title, .artist {
+    margin: 0;
 }
 
 .song-title {
     font-size: 1em;
-    color: white;
-    margin: 0;
-    padding-top: 10px;
+    color: var(--text-color);
 }
 
 .artist {
     font-size: 0.7em;
-    color: white;
-    margin: 0;
+    color: var(--text-color);
 }
 
 .preview-button {
     font-family: "Fira Code", monospace;
-    background-color: rgba(0, 0, 0, 0);
-    border: solid;
-    border-color: rgba(143, 143, 143, 0.233);
-    border-width: 2px;
-    color: white;
+    background: none;
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
     border-radius: 15px;
     padding: 5px 10px;
     cursor: pointer;
@@ -154,15 +145,15 @@ body {
 }
 
 .preview-button:hover {
-    background-color: rgba(173,84,255,255);
+    background-color: var(--highlight-color);
 }
 
 .icons {
     margin: 20px auto;
     display: flex;
     justify-content: center;
-    width: 300px; /* remove to add funny animation on icons hover -Nyawai*/
-    height: 30px; /* remove to add funny animation on icons hover -Nyawai*/
+    width: 300px;
+    height: 30px;
 }
 
 .icons a {
@@ -187,9 +178,7 @@ body {
 
 .welcome-msg {
     font-size: 0.8em;
-    color: gray;
+    color: var(--gray-color);
     margin-top: 10px;
     text-align: center;
 }
-
-
